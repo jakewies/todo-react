@@ -8,7 +8,7 @@ class AddTodo extends React.Component {
   }
   render() {
     return (
-			<form ref={ (input) => this.todoForm = input }className="add-todo" onSubmit={ (evt) => this.handleAddTodo(evt, this.todo.value) }>
+			<form ref={ (input) => this.todoForm = input } className="add-todo" onSubmit={ (evt) => this.handleAddTodo(evt, this.todo.value) }>
 				<input type="text" required placeholder="add todo" ref={ (input) => this.todo = input } />
 				<button type="submit">+</button>
 			</form>

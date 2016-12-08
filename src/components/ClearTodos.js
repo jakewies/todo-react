@@ -8,7 +8,7 @@ class ClearTodos extends React.Component {
 
   render() {
     return (
-      <button onClick={ (evt) => this.handleClearTodos(evt) }>Clear Completed Todos</button>
+      <button onClick={ (evt) => this.handleClearTodos(evt) }>Clear Completed</button>
     )
   }
 }

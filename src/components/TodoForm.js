@@ -5,7 +5,7 @@ import ClearTodos from './ClearTodos';
 class TodoForm extends React.Component {
   render() {
     return (
-      <div>
+      <div className="todo-form">
         <AddTodo addTodo={this.props.addTodo} />
         <ClearTodos clearCompleteTodos={this.props.clearCompleteTodos} />
       </div>

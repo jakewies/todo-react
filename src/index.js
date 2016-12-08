@@ -46,9 +46,12 @@ class App extends React.Component {
 
   render() {
     return (
-      <div>
-        <TodosList todos={this.state.todos} removeTodo={this.removeTodo} completeTodo={this.completeTodo} />
-        <TodoForm addTodo={this.addTodo} clearCompleteTodos={this.clearCompleteTodos}/>
+      <div className="container">
+        <div>
+          <TodoForm addTodo={this.addTodo} clearCompleteTodos={this.clearCompleteTodos}/>
+          <TodosList todos={this.state.todos} removeTodo={this.removeTodo} completeTodo={this.completeTodo} />
+        </div>
+        <pre>{JSON.stringify(this.state, null, 2)}</pre>
       </div>
     )
   }

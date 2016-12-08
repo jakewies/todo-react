@@ -1,3 +1,88 @@
+input {
+	background-color: #f2f2f2;
+	width: 330px;
+	height: 20px;
+	padding: 10px 5px;
+	border: 0;
+	font-size: 16px;
+	font-family: sans-serif;
+	font-weight: 300;
+}
+
+input:focus {
+	outline: none;
+}
+
+button {
+	border: 0;
+	font-size: 12px;
+	cursor: pointer;
+	color: #f2f2f2;
+	padding: 5px;
+	margin: 0 10px;
+}
+
+button:focus {
+	outline: none;
+}
+
+pre {
+	background: #f2f2f2;
+	padding: 25px;
+}
+
+ul {
+	list-style: none;
+	padding: 0;
+}
+
+li h2 {
+	font-weight: lighter;
+}
+
+.container {
+	display: flex;
+	justify-content: space-around;
+	align-items: flex-start;
+}
+
+.todo-form {
+	display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-around;
+  height: 100px;
+	margin-bottom: 50px;
+}
+
+.add-todo {
+	text-align: center;
+}
+
+.add-todo button {
+	width: 50px;
+	height: 40px;
+	background-color: #3385ff;
+	color: #f2f2f2;
+	font-size: 16px;
+}
+
 .complete {
 	text-decoration: line-through;
+}
+
+.todo {
+	padding: 10px;
+	background: #f2f2f2;
+	box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24);
+	margin-bottom: 25px;
+}
+.btns {
+	display: flex;
+	justify-content: center;
+}
+
+.btns button {
+	background: none;
+	color: lightcoral;
 }

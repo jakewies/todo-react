@@ -17,10 +17,8 @@ class Todo extends React.Component {
     return (
 			<li className={this.props.className ? 'todo complete' : 'todo'}>
 				<h2>{this.props.value}</h2>
-        <div className="btns">
-          <button onClick={ (evt) => this.handleRemoveTodo(evt, this.props.num) }>Remove</button>
-          <button onClick={ (evt) => this.handleCompleteTodo(evt, this.props.num) }>Complete</button>
-        </div>
+        <button onClick={ (evt) => this.handleRemoveTodo(evt, this.props.num) }>Remove</button>
+        <button onClick={ (evt) => this.handleCompleteTodo(evt, this.props.num) }>Complete</button>
 			</li>
     )
   }

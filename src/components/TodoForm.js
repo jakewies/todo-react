@@ -1,13 +1,36 @@
 import React from 'react';
-import AddTodo from './AddTodo';
-import ClearTodos from './ClearTodos';
+import TestTodos from '../helpers/TestTodos';
 
 class TodoForm extends React.Component {
+
+  handleAddTodo(evt, todo) {
+    evt.preventDefault();
+    this.props.addTodo(todo);
+    this.todoForm.reset();
+  }
+
+  handleTestTodos(evt, todos) {
+    evt.preventDefault();
+    for (let todo of todos) {
+      this.props.addTodo(todo);
+    }
+  }
+
+  handleClearTodos(evt) {
+    evt.preventDefault();
+    this.props.clearCompleteTodos();
+  }
+
   render() {
     return (
       <div className="todo-form">
-        <AddTodo addTodo={this.props.addTodo} />
-        <ClearTodos clearCompleteTodos={this.props.clearCompleteTodos} />
+        <form className="add" ref={ (input) => this.todoForm = input } onSubmit={ (evt) => this.handleAddTodo(evt, this.todo.value) }>
+          <input type="text" required placeholder="add todo..." ref={ (input) => this.todo = input } />
+          <button className="add-btn" type="submit">Add</button>
+        </form>
+        <button className="clear-btn" onClick={ (evt) => this.handleClearTodos(evt) }>Clear</button>
+        <button className="test-btn" onClick={ (evt) => this.handleTestTodos(evt, TestTodos) }>Test</button>
+
       </div>
     )
   }

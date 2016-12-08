@@ -39,7 +39,6 @@ class App extends React.Component {
   }
 
   clearCompleteTodos() {
-    console.log(this.state);
     let todos = this.state.todos.slice();
     this.setState({ todos: todos.filter( (todo) => !todo.complete ) });
   }
@@ -47,11 +46,11 @@ class App extends React.Component {
   render() {
     return (
       <div className="container">
-        <div>
-          <TodoForm addTodo={this.addTodo} clearCompleteTodos={this.clearCompleteTodos}/>
+        <div className="main">
+          <TodoForm addTodo={this.addTodo} clearCompleteTodos={this.clearCompleteTodos} />
           <TodosList todos={this.state.todos} removeTodo={this.removeTodo} completeTodo={this.completeTodo} />
         </div>
-        <pre>{JSON.stringify(this.state, null, 2)}</pre>
+        <pre className="state">{JSON.stringify(this.state, null, 2)}</pre>
       </div>
     )
   }

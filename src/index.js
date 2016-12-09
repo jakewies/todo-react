@@ -46,15 +46,15 @@ class App extends React.Component {
   render() {
     return (
       <div className="container">
-        <div className="main">
-          <TodoForm addTodo={this.addTodo} clearCompleteTodos={this.clearCompleteTodos} />
-          <TodosList todos={this.state.todos} removeTodo={this.removeTodo} completeTodo={this.completeTodo} />
-        </div>
         <div className="meta">
           <h1>React Todo MVC Application State</h1>
           <pre className="state">
             {JSON.stringify(this.state, null, 2)}
           </pre>
+        </div>
+        <div className="main">
+          <TodoForm addTodo={this.addTodo} clearCompleteTodos={this.clearCompleteTodos} />
+          <TodosList todos={this.state.todos} removeTodo={this.removeTodo} completeTodo={this.completeTodo} />
         </div>
       </div>
     )

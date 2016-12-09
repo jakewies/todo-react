@@ -8,7 +8,9 @@ html {
 ::after {
 	background-repeat: no-repeat; /* 1 */
 	box-sizing: inherit; /* 2 */
+	margin: 0;
 }
+
 
 /* SIMPLE ATTRIBUTES */
 h1 {
@@ -31,15 +33,14 @@ ul {
 }
 
 pre {
-	background: #f2f2f2;
 	padding: 25px;
 	white-space: pre-wrap;
 	margin: 0;
 }
 
 input {
+	flex-grow: 1;
 	background-color: #f2f2f2;
-	width: 90%;
 	height: 40px;
 	padding: 10px 5px;
 	border: 0;
@@ -65,29 +66,25 @@ button {
 
 /* CLASSES */
 .container {
-	display: -webkit-box;
-	display: -webkit-flex;
-	display: -ms-flexbox;
 	display: flex;
-	-webkit-box-pack: justify;
-	-webkit-justify-content: space-between;
-	    -ms-flex-pack: justify;
-	        justify-content: space-between;
-	margin: 20px;
 }
 
 .main {
-	width: 67%;
+	flex-grow: 1;
+	padding: 20px;
 }
 
 .meta {
-	width: 33%;
+	flex-shrink: 0;
+	width: 400px;
+	min-height: 100vh;
+	padding: 20px;
+	background: #f2f2f2;
 }
 
 .todo-form {
 	margin-bottom: 50px;
 	display: flex;
-	justify-content: center;
 }
 
 .todo-form button {
@@ -95,7 +92,8 @@ button {
 }
 
 .add {
-	width: 60%;
+	flex-grow: 1;
+	display: flex;
 	margin-right: 10px;
 }
 
@@ -121,7 +119,8 @@ button {
 }
 
 .btn--add {
-	width: 10%;
+	flex-shrink: 0;
+	width: 50px;
 	background-color: #3385ff;
 }
 
@@ -134,10 +133,21 @@ button {
 }
 
 .btn--test, .btn--clear {
-	width: 10%;
+	width: 120px;
 	margin-right: 10px;
 }
 
 .complete {
 	text-decoration: line-through;
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 996px) {
+	.container {
+		flex-direction: column-reverse;
+
+	}
+	.meta {
+		width: 100%;
+	}
 }

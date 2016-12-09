@@ -11,6 +11,13 @@ html {
 }
 
 /* SIMPLE ATTRIBUTES */
+h1 {
+	font-family: 'Noto Sans', Arial;
+	text-align: center;
+	margin: 0 0 25px;
+	color: #3385ff;
+}
+
 h2 {
 	font-weight: 300;
 	font-family: 'Noto Sans', Arial;
@@ -24,7 +31,6 @@ ul {
 }
 
 pre {
-	width: 33%;
 	background: #f2f2f2;
 	padding: 25px;
 	white-space: pre-wrap;
@@ -67,11 +73,15 @@ button {
 	-webkit-justify-content: space-between;
 	    -ms-flex-pack: justify;
 	        justify-content: space-between;
-	margin: 0 20px;
+	margin: 20px;
 }
 
 .main {
 	width: 67%;
+}
+
+.meta {
+	width: 33%;
 }
 
 .todo-form {
@@ -103,11 +113,11 @@ button {
 }
 
 .btn--remove {
-	color: #F44336;
+	color: #FF1744;
 }
 
 .btn--complete {
-	color: #4CAF50;
+	color: #00E676;
 }
 
 .btn--add {
@@ -116,11 +126,11 @@ button {
 }
 
 .btn--test {
-	background: orange;
+	background: #607D8B;
 }
 
 .btn--clear {
-	background: lightcoral;
+	background: #FF1744;
 }
 
 .btn--test, .btn--clear {

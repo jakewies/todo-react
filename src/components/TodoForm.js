@@ -26,10 +26,10 @@ class TodoForm extends React.Component {
       <div className="todo-form">
         <form className="add" ref={ (input) => this.todoForm = input } onSubmit={ (evt) => this.handleAddTodo(evt, this.todo.value) }>
           <input type="text" required placeholder="add todo..." ref={ (input) => this.todo = input } />
-          <button className="add-btn" type="submit">Add</button>
+          <button className="btn--add" type="submit">Add</button>
         </form>
-        <button className="clear-btn" onClick={ (evt) => this.handleClearTodos(evt) }>Clear</button>
-        <button className="test-btn" onClick={ (evt) => this.handleTestTodos(evt, TestTodos) }>Test</button>
+        <button className="btn--clear" onClick={ (evt) => this.handleClearTodos(evt) }>Clear</button>
+        <button className="btn--test" onClick={ (evt) => this.handleTestTodos(evt, TestTodos) }>Test</button>
 
       </div>
     )

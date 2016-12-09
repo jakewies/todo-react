@@ -11,13 +11,16 @@ html {
 }
 
 /* SIMPLE ATTRIBUTES */
+h2 {
+	font-weight: 300;
+	font-family: 'Noto Sans', Arial;
+	font-size: 1.25rem;
+	margin-left: 20px;
+}
+
 ul {
 	list-style: none;
 	padding: 0;
-}
-
-li h2 {
-	font-weight: lighter;
 }
 
 pre {
@@ -49,6 +52,9 @@ button {
 	cursor: pointer;
 	color: #f2f2f2;
 	padding: 5px;
+	font-family: 'Roboto', Arial;
+	text-transform: uppercase;
+	font-weight: 300;
 }
 
 /* CLASSES */
@@ -61,6 +67,7 @@ button {
 	-webkit-justify-content: space-between;
 	    -ms-flex-pack: justify;
 	        justify-content: space-between;
+	margin: 0 20px;
 }
 
 .main {
@@ -82,20 +89,41 @@ button {
 	margin-right: 10px;
 }
 
-.add-btn {
+.todo {
+	width: 90%;
+	padding: 10px;
+	display: flex;
+	align-items: center;
+	border-bottom: 1px solid #f2f2f2;
+	color: #bdbdbd;
+}
+
+.todo button {
+	background: none;
+}
+
+.btn--remove {
+	color: #F44336;
+}
+
+.btn--complete {
+	color: #4CAF50;
+}
+
+.btn--add {
 	width: 10%;
 	background-color: #3385ff;
 }
 
-.test-btn {
+.btn--test {
 	background: orange;
 }
 
-.clear-btn {
+.btn--clear {
 	background: lightcoral;
 }
 
-.test-btn, .clear-btn {
+.btn--test, .btn--clear {
 	width: 10%;
 	margin-right: 10px;
 }

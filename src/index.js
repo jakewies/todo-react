@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import './css/styles.css';
 import TodosList from './components/TodosList';
 import TodoForm from './components/TodoForm';
+import Meta from './components/Meta';
 
 class App extends React.Component {
   constructor() {
@@ -46,12 +47,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="container">
-        <div className="meta">
-          <h1>React Todo MVC Application State</h1>
-          <pre className="state">
-            {JSON.stringify(this.state, null, 2)}
-          </pre>
-        </div>
+        <Meta state={this.state} />
         <div className="main">
           <TodoForm addTodo={this.addTodo} clearCompleteTodos={this.clearCompleteTodos} />
           <TodosList todos={this.state.todos} removeTodo={this.removeTodo} completeTodo={this.completeTodo} />

@@ -98,8 +98,8 @@ button {
 }
 
 .todo {
-	width: 90%;
-	padding: 10px;
+	width: 100%;
+	padding: 10px 0;
 	display: flex;
 	align-items: center;
 	border-bottom: 1px solid #f2f2f2;
@@ -149,5 +149,24 @@ button {
 	}
 	.meta {
 		width: 100%;
+	}
+}
+@media (max-width: 600px) {
+	.main {
+		padding: 10px;
+	}
+
+	.meta {
+		display: none;
+	}
+}
+
+@media (max-width: 400px) {
+	.btn--test {
+		display: none;
+	}
+
+	h2 {
+		font-size: 16px;
 	}
 }

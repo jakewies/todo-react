@@ -1,6 +1,6 @@
-# React Todo list
+# TODO React
 
-This web app is built on top of React using [create-react-app](https://github.com/facebookincubator/create-react-app) and integrates with [Firebase's](https://firebase.google.com/) realtime database via [Re-base](https://github.com/tylermcginnis/re-base). 
+This web app is built on top of React using [create-react-app](https://github.com/facebookincubator/create-react-app) and integrates with [Firebase's](https://firebase.google.com/) realtime database via [Re-base](https://github.com/tylermcginnis/re-base).
 
 ## Live Demo
 

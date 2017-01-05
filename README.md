@@ -4,7 +4,7 @@ This web app is built on top of React using [create-react-app](https://github.co
 
 ## Live Demo
 
-A demo of the app is available [here](https://github.com/jake-wies/todo-react)
+A demo of the app is available [here](https://jake-wies.github.io/todo-react/)
 
 ## Getting Started
 
@@ -34,7 +34,7 @@ Before starting the app locally, go to the [Firebase console](https://console.fi
 2. Copy the `config` object
 3. Open up `/src/firebase-config.js` and replace the default configuration settings
 
-Note: The `messagingSenderId` is not used in this project. Feel free to leave it out.
+Note: The `messagingSenderId` property is not used in this project. Feel free to leave it out.
 
 #### Run the app
 

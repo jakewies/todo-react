@@ -1,3 +1,4 @@
+// Change this object to your own Firebase project's configuration
 const Config = {
   apiKey: "AIzaSyCCToJEX3DZhSrIKWY4PCeFr0qmixIXBB8",
   authDomain: "todo-react-9a52b.firebaseapp.com",

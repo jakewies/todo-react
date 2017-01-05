@@ -13,9 +13,12 @@ html {
 
 
 /* SIMPLE ATTRIBUTES */
+h1, h2, h3 {
+	font-family: 'Noto Sans', Arial;
+}
+
 h1 {
 	font-size: 22px;
-	font-family: 'Noto Sans', Arial;
 	text-align: center;
 	margin: 0 0 25px;
 	color: #3385ff;
@@ -23,9 +26,13 @@ h1 {
 
 h2 {
 	font-weight: 300;
-	font-family: 'Noto Sans', Arial;
 	font-size: 1.25rem;
 	margin-left: 20px;
+}
+
+h3 {
+	color: lightgrey;
+	text-align: center;
 }
 
 ul {

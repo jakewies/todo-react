@@ -4,12 +4,15 @@ import './css/styles.css';
 import TodosList from './components/TodosList';
 import TodoForm from './components/TodoForm';
 import Meta from './components/Meta';
+import Base from './rebase';
 
 class App extends React.Component {
+
   constructor() {
 		super();
 		this.state = {
-			todos: []
+			todos: [],
+      loading: true
 		}
 
     this.addTodo = this.addTodo.bind(this);
@@ -17,6 +20,18 @@ class App extends React.Component {
     this.completeTodo = this.completeTodo.bind(this);
     this.clearCompleteTodos = this.clearCompleteTodos.bind(this);
 	}
+
+  // React lifecycle method that is invoked when component mounts (loads)
+  componentDidMount() {
+    Base.syncState('todoList', {
+      context: this,
+      state: 'todos',
+      asArray: true,
+      then(){
+        this.setState({ loading: false })
+      }
+    });
+  }
 
   addTodo(todo) {
     let todos = this.state.todos;
@@ -50,7 +65,7 @@ class App extends React.Component {
         <Meta state={this.state} />
         <div className="main">
           <TodoForm addTodo={this.addTodo} clearCompleteTodos={this.clearCompleteTodos} />
-          <TodosList todos={this.state.todos} removeTodo={this.removeTodo} completeTodo={this.completeTodo} />
+          { this.state.loading === true ? <h3> LOADING... </h3> : <TodosList todos={this.state.todos} removeTodo={this.removeTodo} completeTodo={this.completeTodo} /> }
         </div>
       </div>
     )

@@ -6,9 +6,11 @@ This web app is built on top of React using [create-react-app](https://github.co
 
 A demo of the app is available [here](https://jake-wies.github.io/todo-react/)
 
+**Note**: The live demo does not feature real time data persistence with Firebase. The reason for this being lack of user authentication. Every user who accesses the live demo would be able to read / write to the database. Can't have that! You can see the database feature in action if you choose to clone the repo. See below.
+
 ## Getting Started
 
-This project is purely educational. It's my first application built with React. With that being said, anyone doing the same can contribute to this project. You can also clone it and get your hands dirty to see how it works.
+This project is purely educational. It's my first application built with React. With that being said, anyone doing the same can contribute. You can also clone it and get your hands dirty to see how it works.
 
 #### Clone the repo
 
@@ -33,9 +35,22 @@ Before starting the app locally, go to the [Firebase console](https://console.fi
 1. After creating your project, click the red `<>` icon titled **Add Firebase to your web app**
 2. Copy the `config` object
 3. Open up `/src/firebase-config.js` and replace the default configuration settings
+4. Open `/src/index.js`. There are a 2 lines that need to be uncommented in order to get Firebase working.
 
-Note: The `messagingSenderId` property is not used in this project. Feel free to leave it out.
+ ```
+ import Base from './rebase';
+ ```
+
+ ```
+ componentDidMount() {
+   // ...
+ }
+ ```
+
+ The first line imports the `Re-base` class from `/src/rebase.js`. The second syncs the `App` component's state to Firebase when it mounts.
+
+**Note**: The `messagingSenderId` property is not used in this project. Feel free to leave it out.
 
 #### Run the app
 
-Everything is set to run the application. Just run `npm start` in your terminal and profit!
+Everything is set to run the application. Just run `npm start` in your terminal and profit! 

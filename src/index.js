@@ -4,7 +4,7 @@ import './css/styles.css';
 import TodosList from './components/TodosList';
 import TodoForm from './components/TodoForm';
 import Meta from './components/Meta';
-import Base from './rebase';
+//import Base from './rebase';
 
 class App extends React.Component {
 
@@ -12,7 +12,6 @@ class App extends React.Component {
 		super();
 		this.state = {
 			todos: [],
-      loading: true
 		}
 
     this.addTodo = this.addTodo.bind(this);
@@ -21,17 +20,20 @@ class App extends React.Component {
     this.clearCompleteTodos = this.clearCompleteTodos.bind(this);
 	}
 
-  // React lifecycle method that is invoked when component mounts (loads)
-  componentDidMount() {
-    Base.syncState('todoList', {
-      context: this,
-      state: 'todos',
-      asArray: true,
-      then(){
-        this.setState({ loading: false })
-      }
-    });
-  }
+  /**
+   * React lifecycle method that is invoked when component mounts (loads)
+   * Uncomment this method in order to achieve data persistence with your Firebase project
+   */
+  // componentDidMount() {
+  //   Base.syncState('todoList', {
+  //     context: this,
+  //     state: 'todos',
+  //     asArray: true,
+  //     then(){
+  //       this.setState({ loading: false })
+  //     }
+  //   });
+  // }
 
   addTodo(todo) {
     let todos = this.state.todos;
@@ -65,7 +67,7 @@ class App extends React.Component {
         <Meta state={this.state} />
         <div className="main">
           <TodoForm addTodo={this.addTodo} clearCompleteTodos={this.clearCompleteTodos} />
-          { this.state.loading === true ? <h3> LOADING... </h3> : <TodosList todos={this.state.todos} removeTodo={this.removeTodo} completeTodo={this.completeTodo} /> }
+          <TodosList todos={this.state.todos} removeTodo={this.removeTodo} completeTodo={this.completeTodo} />
         </div>
       </div>
     )

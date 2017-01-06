@@ -4,7 +4,7 @@ This web app is built on top of React using [create-react-app](https://github.co
 
 ## Live Demo
 
-A demo of the app is available [here](https://jake-wies.github.io/todo-react/)
+A demo of the app is available [here](https://jake-wies.github.io/todo-react/).
 
 **Note**: The live demo does not feature real time data persistence with Firebase. The reason for this being lack of user authentication. Every user who accesses the live demo would be able to read / write to the database. Can't have that! You can see the database feature in action if you choose to clone the repo. See below.
 
@@ -53,4 +53,4 @@ Before starting the app locally, go to the [Firebase console](https://console.fi
 
 #### Run the app
 
-Everything is set to run the application. Just run `npm start` in your terminal and profit! 
+Everything is set to run the application. Just run `npm start` in your terminal and profit!

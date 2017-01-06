@@ -33,8 +33,8 @@ npm install
 Before starting the app locally, go to the [Firebase console](https://console.firebase.google.com/) and create a new project. Once that's done you'll be able to add the proper configuration settings in order to sync with Firebase's realtime database.
 
 1. After creating your project, click the red `<>` icon titled **Add Firebase to your web app**
-2. Copy the `config` object
-3. Open up `/src/firebase-config.js` and replace the default configuration settings
+2. Copy the `config` object properties provided
+3. Open up `/src/firebase-config.js` and add your Firebase `config` object properties to the `Config` object
 4. Open `/src/index.js`. There are 2 lines that need to be uncommented in order to get Firebase working.
 
  ```

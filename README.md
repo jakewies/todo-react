@@ -35,7 +35,7 @@ Before starting the app locally, go to the [Firebase console](https://console.fi
 1. After creating your project, click the red `<>` icon titled **Add Firebase to your web app**
 2. Copy the `config` object
 3. Open up `/src/firebase-config.js` and replace the default configuration settings
-4. Open `/src/index.js`. There are a 2 lines that need to be uncommented in order to get Firebase working.
+4. Open `/src/index.js`. There are 2 lines that need to be uncommented in order to get Firebase working.
 
  ```
  import Base from './rebase';
@@ -49,7 +49,7 @@ Before starting the app locally, go to the [Firebase console](https://console.fi
 
  The first line imports the `Re-base` class from `/src/rebase.js`. The second syncs the `App` component's state to Firebase when it mounts.
 
-**Note**: The `messagingSenderId` property is not used in this project. Feel free to leave it out.
+**Note**: The `messagingSenderId` property in the `config` option provided by Firebase is not used in this project. Feel free to leave it out.
 
 #### Run the app
 
